@@ -13,21 +13,27 @@ project "yaml-cpp"
 		"include/**.h"
 	}
 
+
 	includedirs
 	{
 		"include"
 	}
 
+	defines
+	{
+		"YAML_CPP_STATIC_DEFINE"
+	}
+
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime "on"
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime "on"
 
 	filter "configurations:Debug"
 		runtime "Debug"

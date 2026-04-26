@@ -49,7 +49,8 @@ const char* const DOC_IN_SCALAR = "illegal document indicator in scalar";
 const char* const EOF_IN_SCALAR = "illegal EOF in scalar";
 const char* const CHAR_IN_SCALAR = "illegal character in scalar";
 const char* const UNEXPECTED_SCALAR = "unexpected scalar";
-const char* const UNEXPECTED_FLOW = "plain value cannot start with flow indicator character";
+const char* const UNEXPECTED_FLOW =
+    "plain value cannot start with flow indicator character";
 const char* const TAB_IN_INDENTATION =
     "illegal tab when looking for indentation";
 const char* const FLOW_END = "illegal flow end";
@@ -89,7 +90,8 @@ const char* const INVALID_ANCHOR = "invalid anchor";
 const char* const INVALID_ALIAS = "invalid alias";
 const char* const INVALID_TAG = "invalid tag";
 const char* const BAD_FILE = "bad file";
-const char* const UNEXPECTED_TOKEN_AFTER_DOC = "unexpected token after end of document";
+const char* const UNEXPECTED_TOKEN_AFTER_DOC =
+    "unexpected token after end of document";
 const char* const NON_UNIQUE_MAP_KEY = "map keys must be unique";
 
 template <typename T>
@@ -315,7 +317,7 @@ class YAML_CPP_API NonUniqueMapKey : public RepresentationException {
 }  // namespace YAML
 
 #if defined(_MSC_VER)
-#define YAML_ATTRIBUTE_NO_SANITIZE_ADDRESS __declspec(no_sanitize_address)
+#define YAML_ATTRIBUTE_NO_SANITIZE_ADDRESS
 #elif defined(__has_cpp_attribute) && __has_cpp_attribute(gnu::no_sanitize)
 #define YAML_ATTRIBUTE_NO_SANITIZE_ADDRESS [[gnu::no_sanitize("address")]]
 #elif defined(__has_cpp_attribute) && __has_cpp_attribute(clang::no_sanitize)
